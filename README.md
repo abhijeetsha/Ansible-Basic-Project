@@ -12,3 +12,13 @@
   * sudo apt install ansible -y
 ### Verify the installation was successful by checking the installed version:
   * ansible --version  
+### Go TO Host File 
+  * sudo vim /etc/ansible/hosts
+### In That Host File Add Some Lines Of Client Server
+   * Ex 2: A collection of hosts belonging to the 'webservers' group:
+
+   * [servers]
+   * server_1 ansible_host=54.146.89.53
+   * server_2 ansible_host=18.234.212.135
+   * server_3 ansible_host=52.90.59.236
+### 
