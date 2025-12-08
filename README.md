@@ -1,7 +1,7 @@
 # Ansible-Basic-Project
 ## Installations Of Ansible Package
 ## * Create One Master-Server And Create Three Client-Server.
-## In Maste-Server You Have to Install Ansible Package 
+## * In Maste-Server You Have to Install Ansible Package 
 ### Update your system's package list and upgrade installed packages:
   * sudo apt update && sudo apt upgrade -y
 ### Install the software-properties-common package, which is required to manage repositories:
