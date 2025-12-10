@@ -28,7 +28,9 @@
   * [servers:vars]
   * ansible_python_interpreter=/usr/bin/python3
   * ansbile_user=ubuntu
-  * ansible_ssh_private_key_file=/<filename>
+  * ansible_ssh_private_key_file=/home/ubuntu/keys/ansible-master-key.pem
+### Give Permisions to private key
+  * sudo chmod 400 /home/ubuntu/keys/ansible-master-key.pem
 ### For Checking ping master server to client server command is:
   * ansible servers -m ping
 ### For Updating All servers command is:
