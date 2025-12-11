@@ -31,6 +31,9 @@
   * ansible_ssh_private_key_file=/home/ubuntu/keys/ansible-master-key.pem
 ### Give Permisions to private key
   * sudo chmod 400 /home/ubuntu/keys/ansible-master-key.pem
+### Not connected Run this Command:
+  * You Directly enter into the server and handel it all resource
+  * ssh -i /home/ubuntu/keys/ansible-master-key.pem ubuntu@50.17.116.251
 ### For Checking ping master server to client server command is:
   * ansible servers -m ping
 ### For Updating All servers command is:
