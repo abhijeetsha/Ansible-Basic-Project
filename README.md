@@ -38,4 +38,48 @@
   * ansible servers -m ping
 ### For Updating All servers command is:
   * ansible servers -a "sudo apt update"
-  * 
+### Project1:-
+### Install Nginx File with Playbook
+  * File name: install-nginx.yaml
+  * Code:
+  * -
+      name: Install Nginx and Start It
+      hosts: all
+      become: yes
+     tasks:
+       - name: Insall Nginx
+          apt:
+          name: nginx
+          state: latest
+       - name: Start Nginx
+          service:
+          name: nginx
+          state: started
+          enabled: yes
+ * Run Command: ansible-playbook install-nginx.yaml
+### Project2:- Deplyo static webpage hosting on Prodcution server
+  * File name: deploy-static-webpage.yaml
+  * Code:
+  -
+    name: Install Nginx and server static website
+    hosts: prod
+    become: yes
+    tasks:
+      - name: Install Nginx
+        apt:
+          name: nginx
+          state: latest
+
+      - name: Start nginx
+        service:
+          name: nginx
+          state: started
+          enabled: yes
+
+     - name: Deploy Web Page
+        copy:
+          src: index.html
+          dest: /var/www/html/
+  * Create index.html add html code and
+  * ansible-playbook deploy-static-webpage.yaml
+  * Go to browser and check with your public IP.
